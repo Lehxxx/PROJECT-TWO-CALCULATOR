@@ -28,6 +28,232 @@
             const outputText = document.getElementById('outputText');
             const result = document.getElementsByClassName('.result');
             const cornerOutput = document.getElementById('cornerOutput');
+            //-----------------------------------------------------------------
+            document.addEventListener("keyup", (event)=> {
+                if (event.keyCode === 48){
+                    event.preventDefault();
+                    // your code to Run
+                    console.log("0 pressed");
+                    zero.click();
+                }
+                if (event.keyCode === 49){
+                    event.preventDefault();
+                    // your code to Run
+                    console.log("0 pressed");
+                    one.click();
+                }
+                if (event.keyCode === 50){
+                    event.preventDefault();
+                    // your code to Run
+                    console.log("0 pressed");
+                    two.click();
+                }
+                if (event.keyCode === 51){
+                    event.preventDefault();
+                    // your code to Run
+                    console.log("0 pressed");
+                    three.click();
+                }
+                if (event.keyCode === 52){
+                    event.preventDefault();
+                    // your code to Run
+                    console.log("0 pressed");
+                    four.click();
+                }
+                if (event.keyCode === 53){
+                    event.preventDefault();
+                    // your code to Run
+                    console.log("0 pressed");
+                    five.click();
+                }
+                if (event.keyCode === 54){
+                    event.preventDefault();
+                    // your code to Run
+                    console.log("0 pressed");
+                    six.click();
+                }
+                if (event.keyCode === 55){
+                    
+                    // your code to Run
+                    console.log("0 pressed");
+                    seven.click();
+                }
+                if (event.keyCode === 56){
+                    event.preventDefault();
+                    // your code to Run
+                    console.log("0 pressed");
+                    eight.click();
+                }
+                if (event.keyCode === 57){
+                    event.preventDefault();
+                    // your code to Run
+                    console.log("0 pressed");
+                    nine.click();
+                }
+                if (event.keyCode === 219){
+                    event.preventDefault();
+                    // your code to Run
+                    console.log("0 pressed");
+                    LBracket.click();
+                }
+                if (event.keyCode === 221){
+                    event.preventDefault();
+                    // your code to Run
+                    console.log("0 pressed");
+                    RBracket.click();
+                }
+                if (event.keyCode === 189){
+                    event.preventDefault();
+                    // your code to Run
+                    console.log("0 pressed");
+                    subtract.click();
+                }
+                if (event.keyCode === 106){
+                    event.preventDefault();
+                    // your code to Run
+                    console.log("0 pressed");
+                    multiply.click();
+                }
+                if (event.keyCode === 189){
+                    event.preventDefault();
+                    // your code to Run
+                    console.log("0 pressed");
+                    dash.click();
+                }
+                if (event.keyCode === 190){
+                    event.preventDefault();
+                    // your code to Run
+                    console.log("0 pressed");
+                    period.click();
+                }
+                if (event.keyCode === 187){
+                    event.preventDefault();
+                    // your code to Run
+                    console.log("0 pressed");
+                    equals.click();
+                }
+                if (event.keyCode === 107){
+                    event.preventDefault();
+                    // your code to Run
+                    console.log("0 pressed");
+                    plus.click();
+                }
+                //---------------------------------------------------
+
+
+                if (event.keyCode === 96){
+                    event.preventDefault();
+                    // your code to Run
+                    console.log("0 pressed");
+                    zero.click();
+                }
+                if (event.keyCode === 97){
+                    event.preventDefault();
+                    // your code to Run
+                    console.log("0 pressed");
+                    one.click();
+                }
+                if (event.keyCode === 98){
+                    event.preventDefault();
+                    // your code to Run
+                    console.log("0 pressed");
+                    two.click();
+                }
+                if (event.keyCode === 99){
+                    event.preventDefault();
+                    // your code to Run
+                    console.log("0 pressed");
+                    three.click();
+                }
+                if (event.keyCode === 100){
+                    event.preventDefault();
+                    // your code to Run
+                    console.log("0 pressed");
+                    four.click();
+                }
+                if (event.keyCode === 101){
+                    event.preventDefault();
+                    // your code to Run
+                    console.log("0 pressed");
+                    five.click();
+                }
+                if (event.keyCode === 102){
+                    event.preventDefault();
+                    // your code to Run
+                    console.log("0 pressed");
+                    six.click();
+                }
+                if (event.keyCode === 103){
+                    
+                    // your code to Run
+                    console.log("0 pressed");
+                    seven.click();
+                }
+                if (event.keyCode === 104){
+                    event.preventDefault();
+                    // your code to Run
+                    console.log("0 pressed");
+                    eight.click();
+                }
+                if (event.keyCode === 105){
+                    event.preventDefault();
+                    // your code to Run
+                    console.log("0 pressed");
+                    nine.click();
+                }
+                
+                if (event.keyCode === 109){
+                    event.preventDefault();
+                    // your code to Run
+                    console.log("0 pressed");
+                    subtract.click();
+                }
+                if (event.keyCode === 110){
+                    event.preventDefault();
+                    // your code to Run
+                    console.log("0 pressed");
+                    period.click();
+                }
+                if (event.keyCode === 111){
+                    event.preventDefault();
+                    // your code to Run
+                    console.log("0 pressed");
+                    slash.click();
+                }
+                if (event.keyCode === 13){
+                    event.preventDefault();
+                    // your code to Run
+                    console.log("0 pressed");
+                    equals.click();
+                }
+                if (event.keyCode === 191){
+                    event.preventDefault();
+                    // your code to Run
+                    console.log("0 pressed");
+                    slash.click();
+                }
+                
+                
+
+                  
+
+                });
+              
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
             
             
@@ -364,6 +590,7 @@
 
 
                     }
+                    
                     
 
                     
