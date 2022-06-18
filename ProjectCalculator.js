@@ -27,6 +27,7 @@
 
             const outputText = document.getElementById('outputText');
             const result = document.getElementsByClassName('.result');
+            const cornerOutput = document.getElementById('cornerOutput');
 
             
             
@@ -68,7 +69,9 @@
               startNumTwo = "";
               startNumThree = "";
               startNumfour = "";
+              startNumfive = "";
              equation = null;
+             equation2 = null;
 
              numberVariable = "";
              continueVariable = "";
@@ -123,6 +126,7 @@
                 }
                 if(this.id == "AC"){
                     outputText.textContent = "";
+                    cornerOutput.textContent = "";
 
 
 
@@ -131,25 +135,35 @@
                     if(storedEnumOne == "+"){
                         equation = Number(numberOne) + Number(numberTwo);
 
+                        equation2 = numberOne + "" + storedEnumOne + "" + numberTwo;
+
 
                     }
                     if(storedEnumOne == "-" && this.id != "="){
-                        equation = Number(numberOne) - Number(numberTwo);
+                        equation = numberTwo - Number(numberOne);
+
+                        equation2 = numberOne + "" + storedEnumOne + "" + numberTwo;
 
 
                     }
                     if(storedEnumOne == "*" && this.id != "="){
-                        equation = Number(numberOne) * Number(numberTwo);
+                        equation = numberTwo * Number(numberOne);
+
+                        equation2 = numberOne + "" + storedEnumOne + "" + numberTwo;
 
 
                     }
                     if(storedEnumOne == "%" && this.id != "="){
-                        equation = Number(numberOne) / Number(numberTwo);
+                        equation = numberTwo / Number(numberOne);
+
+                        equation2 = numberOne + "" + storedEnumOne + "" + numberTwo;
 
 
                     }
                     if(storedEnumOne == "/" && this.id != "="){
-                        equation = Number(numberOne) / Number(numberTwo) ;
+                        equation = numberTwo / Number(numberOne);
+
+                        equation2 = numberOne + "" + storedEnumOne + "" + numberTwo;
 
 
                     }
@@ -159,34 +173,50 @@
                     if(storedEnumOne == "+" && this.id == "="){
                         equation = Number(numberOne) + Number(numberTwo);
                         outputText.textContent = this.id + " " + equation;
+
+                        equation2 = this.id + " " + equation;
+                        cornerOutput.textContent = equation2;
+                        
                         calculate.terminate();
 
 
                     }
                     if(storedEnumOne == "-" && this.id == "="){
-                        equation = Number(numberOne) - Number(numberTwo);
+                        equation = numberTwo - Number(numberOne);
                         outputText.textContent = this.id + " " + equation;
+
+                        equation2 = this.id + " " + equation;
+                        cornerOutput.textContent = equation2;
                         calculate.terminate();
 
 
                     }
                     if(storedEnumOne == "*" && this.id == "="){
-                        equation = Number(numberOne) * Number(numberTwo);
+                        equation = numberTwo * Number(numberOne);
                         outputText.textContent = this.id + " " + equation;
+
+                        equation2 = this.id + " " + equation;
+                        cornerOutput.textContent = equation2;
                         calculate.terminate();
 
 
                     }
                     if(storedEnumOne == "%" && this.id == "="){
-                        equation = Number(numberOne) / Number(numberTwo);
+                        equation = numberTwo / Number(numberOne);
                         outputText.textContent = this.id + " " + equation;
+
+                        equation2 = this.id + " " + equation;
+                        cornerOutput.textContent = equation2;
                         calculate.terminate();
 
 
                     }
                     if(storedEnumOne == "/" && this.id == "="){
-                        equation = Number(numberOne) / Number(numberTwo) ;
+                        equation =  numberTwo / Number(numberOne);
                         outputText.textContent = this.id + " " + equation;
+
+                        equation2 = this.id + " " + equation;
+                        cornerOutput.textContent = equation2;
                         calculate.terminate();
 
 
@@ -202,11 +232,13 @@
                     outputText.textContent = "";
 
                     outputText.textContent = equation + " " + this.id;
+
+                    cornerOutput.textContent = equation2;
                     
 
 
                     storedEnumTwo = this.id;
-                    numberOne = equation;
+                    
                     
                     numberThree = "";
                     
@@ -232,37 +264,51 @@
                     
                     
                     continueVariable = "yes"
+
+                   
+                    startNumThree = "true";
+                    startNumfive = "true";
                     
 
 
                     
 
                 }
-                if(className == "enum" && storedEnumTwo != "" && this.id != "(" && continueVariable == "yes" && storedEnumThree == "" && startNumThree == "true" && startNumfour == "" || className == "enum" && storedEnumTwo != "" && this.id != ")" && continueVariable == "yes" && storedEnumThree == "" && startNumThree == "true" && startNumfour == ""){
+                if(className == "enum" && storedEnumTwo != "" && this.id != "(" && continueVariable == "yes" && storedEnumThree == "" && startNumThree == "true" && startNumfour == "" && startNumfive == "true" || className == "enum" && storedEnumTwo != "" && this.id != ")" && continueVariable == "yes" && storedEnumThree == "" && startNumThree == "true" && startNumfour == "" && startNumfive == "true"){
                     storedEnumThree = this.id;
 
                     if(storedEnumTwo == "+" && this.id != "="){
                         equation = Number(numberThree) + Number(equation);
 
+                        equation2 = outputText.textContent;
+
 
                     }
                     if(storedEnumTwo == "-" && this.id != "="){
-                        equation = Number(numberThree) - Number(equation);
+                        equation = equation - Number(numberThree);
+
+                        equation2 = outputText.textContent;
 
 
                     }
                     if(storedEnumTwo == "*" && this.id != "="){
-                        equation = Number(numberThree) * Number(equation);
+                        equation = Number(numberThree) * equation;
+
+                        equation2 = outputText.textContent;
 
 
                     }
                     if(storedEnumTwo == "%" && this.id != "="){
-                        equation = Number(numberThree) / Number(equation);
+                        equation = equation / Number(numberThree);
+
+                        equation2 = outputText.textContent;
 
 
                     }
                     if(storedEnumTwo == "/" && this.id != "="){
-                        equation = Number(numberThree) / Number(equation);
+                        equation = equation / Number(numberThree);
+
+                        equation2 = outputText.textContent;
 
 
                     }
@@ -271,34 +317,49 @@
                     if(storedEnumTwo == "+" && this.id == "="){
                         equation = Number(numberThree) + Number(equation);
                         outputText.textContent = this.id + " " + equation;
+                        
+                        equation2 = this.id + " " + equation;
+                        cornerOutput.textContent = equation2;
                         calculate.terminate();
 
 
                     }
                     if(storedEnumTwo == "-" && this.id == "="){
-                        equation = Number(numberThree) - Number(equation);
+                        equation = equation - Number(numberThree);
                         outputText.textContent = this.id + " " + equation;
+                        
+                        equation2 = this.id + " " + equation;
+                        cornerOutput.textContent = equation2;
                         calculate.terminate();
 
 
                     }
                     if(storedEnumTwo == "*" && this.id == "="){
-                        equation = Number(numberThree) * Number(equation);
+                        equation = equation * Number(numberThree);
                         outputText.textContent = this.id + " " + equation;
+                        
+                        equation2 = this.id + " " + equation;
+                        cornerOutput.textContent = equation2;
                         calculate.terminate();
 
 
                     }
                     if(storedEnumTwo == "%" && this.id == "="){
-                        equation = Number(numberThree) / Number(equation);
+                        equation =  equation / Number(numberThree);
                         outputText.textContent = this.id + " " + equation;
+                        
+                        equation2 = this.id + " " + equation;
+                        cornerOutput.textContent = equation2;
                         calculate.terminate();
 
 
                     }
                     if(storedEnumTwo == "/" && this.id == "="){
-                        equation = Number(numberThree) / Number(equation);
+                        equation =  equation / Number(numberThree);
                         outputText.textContent = this.id + " " + equation;
+                        
+                        equation2 = this.id + " " + equation;
+                        cornerOutput.textContent = equation2;
                         calculate.terminate();
 
 
@@ -310,18 +371,22 @@
                     outputText.textContent = "";
 
                     outputText.textContent = equation + " " + this.id;
+
+                    cornerOutput.textContent = equation2;
                     
 
 
                     storedEnumTwo = "";
-                    numberOne = equation;
+                    
                    
                     continueVariable = "yes";
                     
 
 
                     startNumfour = "true";
+                    
                     numberThree = "";
+                    numberFour = ""
 
                 }
                 /* if(className == "enum" && storedEnumTwo == "" && continueVariable == "yes" && this.id != "(" || className == "enum" && storedEnumTwo == "" && continueVariable == "yes" && this.id != ")" ){
@@ -343,7 +408,7 @@
                     
                 } */
              
-             if(className == "number" && storedEnumThree != "" && this.id != "(" && continueVariable == "yes" && startNumfour != ""|| className == "number" && storedEnumThree != "" && this.id != ")" && continueVariable == "yes" && startNumfour != "" ){
+             if(className == "number" && storedEnumThree != "" && this.id != "(" && continueVariable == "yes" && startNumfour != "" && startNumfive != ""|| className == "number" && storedEnumThree != "" && this.id != ")" && continueVariable == "yes" && startNumfour != "" && startNumfive != ""){
                 numberFour += this.id;
 
                
@@ -357,7 +422,7 @@
 
 
                 
-                
+                startNumfive = "full";
                
                 
                 
@@ -366,32 +431,42 @@
                 
 
             }
-            if(className == "enum" && storedEnumTwo == "" && this.id != "(" && continueVariable == "yes" && storedEnumThree != "" && startNumfour != ""|| className == "enum" && storedEnumTwo == "" && this.id != ")" && continueVariable == "yes" && storedEnumThree != "" && startNumfour != ""){
+            if(className == "enum" && storedEnumTwo == "" && this.id != "(" && continueVariable == "yes" && storedEnumThree != "" && startNumfour != "" && startNumfive != "true"|| className == "enum" && storedEnumTwo == "" && this.id != ")" && continueVariable == "yes" && storedEnumThree != "" && startNumfour != "" && startNumfive != "true"){
                 storedEnumTwo = this.id;
 
                 if(storedEnumThree == "+" && this.id != "="){
                     equation = Number(numberFour) + Number(equation);
+
+                    equation2 = outputText.textContent;
                     
 
 
                 }
                 if(storedEnumThree == "-" && this.id != "="){
-                    equation = Number(numberFour) - Number(equation);
+                    equation = equation - numberFour;
+
+                    equation2 = outputText.textContent;
 
 
                 }
                 if(storedEnumThree == "*" && this.id != "="){
-                    equation = Number(numberFour) * Number(equation);
+                    equation =  equation * Number(numberFour);
+
+                    equation2 = outputText.textContent;
 
 
                 }
                 if(storedEnumThree == "%" && this.id != "="){
-                    equation = Number(numberFour) / Number(equation);
+                    equation = equation / Number(numberFour) ;
+
+                    equation2 = outputText.textContent;
 
 
                 }
                 if(storedEnumThree == "/" && this.id != "="){
-                    equation = Number(numberFour) / Number(equation);
+                    equation = equation / Number(numberFour);
+
+                    equation2 = outputText.textContent;
 
 
                 }
@@ -400,34 +475,50 @@
                 if(storedEnumThree == "+" && this.id == "="){
                     equation = Number(numberFour) + Number(equation);
                     outputText.textContent = this.id + " " + equation;
+                    
+                    equation2 = this.id + " " + equation;
+                    cornerOutput.textContent = equation2;
                     calculate.terminate();
 
 
                 }
                 if(storedEnumThree == "-" && this.id == "="){
-                    equation = Number(numberFour) - Number(equation);
+                    equation =  equation - Number(numberFour);
                     outputText.textContent = this.id + " " + equation;
+                    
+                    
+                    equation2 = this.id + " " + equation;
+                    cornerOutput.textContent = equation2;
                     calculate.terminate();
 
 
                 }
                 if(storedEnumThree == "*" && this.id == "="){
-                    equation = Number(numberFour) * Number(equation);
+                    equation = equation * Number(numberFour) ;
                     outputText.textContent = this.id + " " + equation;
+                    
+                    equation2 = this.id + " " + equation;
+                    cornerOutput.textContent = equation2;
                     calculate.terminate();
 
 
                 }
                 if(storedEnumThree == "%" && this.id == "="){
-                    equation = Number(numberFour) / Number(equation);
+                    equation = equation / Number(numberFour) ;
                     outputText.textContent = this.id + " " + equation;
+                    
+                    equation2 = this.id + " " + equation;
+                    cornerOutput.textContent = equation2;
                     calculate.terminate();
 
 
                 }
                 if(storedEnumThree == "/" && this.id == "="){
-                    equation = Number(numberFour) / Number(equation);
+                    equation = equation / Number(numberFour) ;
                     outputText.textContent = this.id + " " + equation;
+                    
+                    equation2 = this.id + " " + equation;
+                    cornerOutput.textContent = equation2;
                     calculate.terminate();
 
 
@@ -438,11 +529,12 @@
                 outputText.textContent = "";
 
                 outputText.textContent = equation + " " + this.id;
+                cornerOutput.textContent = equation2;
                 
 
 
                 
-                numberOne = equation;
+               
                
                 continueVariable = "yes"
 
@@ -451,6 +543,7 @@
                 startNumThree = "true";
                 numberThree = "";
                 startNumfour = "";
+                startNumfive = "";
 
             }
         }
